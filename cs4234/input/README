@@ -1,0 +1,35 @@
+This directory contains two programs and some sample input files for project 1.
+
+For the input files, I used the convention that no file suffix (e.g., in3x3) is
+an ascii file, while the .bin suffix (e.g., in3x3.bin) is a binary file.  You
+can create more input (ascii) files by hand using your favorite editor, and then
+use program a2b to convert them into the binary format required by proj1.
+
+--------------------------------------------------------------------------------
+
+Program a2b.c can be used to convert matrices or vectors stored as human-readable
+(ascii) files into binary files.  For example, in this directory, the binary file
+in3x3.bin was created by running:
+
+  ./a2b in3x3 in3x3.bin
+
+Note that a2b can be used to generate vectors (e.g., permutation vectors) by giving
+it "m x 1" matrices.  If the number of columns is 1, a2b assumes you want to write
+a binary file containing a vector rather than a matrix.  The only difference is
+that a matrix file begins with m and n, the number of rows and columns; a vector
+file begins with only m, the number of entries in the vector.
+
+--------------------------------------------------------------------------------
+
+Program proj1.c is a shell that you are welcome to start with in writing your
+solution to project 1.  Right now, all it does is read in a matrix and a vector
+and print them back out.
+
+You can run it as follows:
+
+  mpirun -np 1 ./proj1 in3x4.bin in3x1.in
+
+--------------------------------------------------------------------------------
+
+See the Makefile for how to compile and link both a2b.c and proj1.c.
+

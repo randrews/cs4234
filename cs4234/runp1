@@ -1,0 +1,3 @@
+#recon lamhosts
+lamboot lamhosts
+mpirun -np 3 ./project1 matrix perm
